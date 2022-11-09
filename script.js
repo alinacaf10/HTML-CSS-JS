@@ -1,11 +1,7 @@
-let first=Number(prompt("Add first Number"))
-let sec=Number(prompt("Add second Num"))
-let div=document.querySelector("div")
-let conf=confirm("Do you multiple this numbers")
 
-if(conf==true){
-div.innerText=(first+sec)
-}
-else{
-div.innerText=("First number: "+first+"\n"+"Second number: "+sec)
-}
+let div=document.querySelector("div")
+const mas=[5,3,1,2,0,-2]
+
+mas.forEach((item,index)=>{
+div.innerText+=" "+item;
+})
