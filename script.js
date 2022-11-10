@@ -6,8 +6,9 @@ div.append(btn);
 btn.focus()
 
 btn.addEventListener("click", function(){
-fetch('https://api.chucknorris.io/jokes/random')
+fetch("https://acb-api.algoritmika.org/api/transaction?from=AZER&to=ORXAN")
   .then(response => response.json())
   .then((data) => {
-    p.innerText=(data.value);
+    p.innerText=Object.values(data[1])
+    console.log(data)
   })})
