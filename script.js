@@ -1,12 +1,13 @@
+let div=document.querySelector("div")
+let p=document.querySelector("p")
+let btn=document.createElement("button")
+btn.innerText="JOKE!!!"
+div.append(btn);
+btn.focus()
 
-let div=document.querySelectorAll("div")
-let btn=document.createElement('BUTTON')
-btn.innerHTML+="button"
-div[0].append(btn)
-
-function changebtnName(event){
-    event.target.innerText="Click"
-}
-btn.addEventListener("click",changebtnName)
-
-
+btn.addEventListener("click", function(){
+fetch('https://api.chucknorris.io/jokes/random')
+  .then(response => response.json())
+  .then((data) => {
+    p.innerText=(data.value);
+  })})
